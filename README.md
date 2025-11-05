@@ -2,16 +2,16 @@
 
 Conway's Game of Life est un automate cellulaire qui simule des phénomènes biologiques à l'aide de règles mathématiques simples. Il est représenté par une grille bidimensionnelle, théoriquement infinie. Les cases blanches représentent des cellules mortes, tandis que les cases noires représentent des cellules vivantes. *(Inspiré par Wikipédia)*
 
-## 🎮 Un Jeu Complexe ?
+## Un Jeu Complexe ?
 
-Le Game of Life est défini par deux règles simples 📜 :
+Le Game of Life est défini par deux règles simples :
 
-1. Une cellule morte ☠️ devient vivante si elle a exactement trois voisins vivants.
-2. Une cellule vivante 💕 meurt si elle a moins de deux voisins (sous-population) ou plus de trois voisins (surpopulation).
+1. Une cellule morte devient vivante si elle a exactement trois voisins vivants.
+2. Une cellule vivante meurt si elle a moins de deux voisins (sous-population) ou plus de trois voisins (surpopulation).
 
 Les cellules vivantes sont représentées par des cases noires, tandis que les cellules mortes sont représentées par des cases blanches.
 
-## 🛠️ Mon Programme
+## Mon Programme
 
 ### **Main.java**
 - Utilise `JFrame` pour l'affichage de la fenêtre.
@@ -28,7 +28,7 @@ Les cellules vivantes sont représentées par des cases noires, tandis que les c
 - **Réinitialisation** : Effacez la grille pour repartir de zéro.
 - **Gestion des générations** : Utilise la classe `Generation` pour suivre et gérer chaque génération de cellules.
 
-## ⌨️ Raccourcis Clavier
+## Raccourcis Clavier
 
 - **ENTER** : Démarrer / Mettre en pause la simulation.
 - **DELETE / BACK_SPACE** : Effacer tout le panel.
@@ -37,3 +37,4 @@ Les cellules vivantes sont représentées par des cases noires, tandis que les c
 - **UP** : Zoomer.
 - **DOWN** : Dézoomer.
 - **ESC** : Afficher la fenêtre d'aide.
+
