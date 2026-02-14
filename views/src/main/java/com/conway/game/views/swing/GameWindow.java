@@ -8,14 +8,6 @@ import com.conway.game.views.swing.controller.KeyboardController;
 import javax.swing.*;
 import java.awt.*;
 
-/**
- * Fenêtre principale de l'application.
- * Compose les différents panels et controllers.
- * 
- * Principe SOLID:
- * - Single Responsibility: composition de l'UI
- * - Dependency Inversion: dépend des abstractions via DI
- */
 public class GameWindow {
     
     private static final int WINDOW_SIZE = 600;
@@ -27,13 +19,11 @@ public class GameWindow {
     private final KeyboardController keyboardController;
     
     public GameWindow(DependencyInjection di) {
-        // Créer la fenêtre
-        this.frame = new JFrame("Jeu de la Vie de Conway - Clean Architecture");
+        this.frame = new JFrame("Jeu de la Vie de Conway");
         this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.frame.setSize(WINDOW_SIZE, WINDOW_SIZE);
         this.frame.setResizable(false);
         
-        // Créer les composants
         this.gridPanel = new GridPanel(
             INITIAL_CELL_SIZE,
             di.getGridStateManager(),
@@ -48,7 +38,6 @@ public class GameWindow {
             gridPanel
         );
         
-        // Assembler l'UI
         setupLayout();
         setupKeyboardListener();
     }

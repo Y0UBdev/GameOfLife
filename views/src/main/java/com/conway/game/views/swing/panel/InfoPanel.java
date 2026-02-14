@@ -16,8 +16,7 @@ public class InfoPanel extends JPanel implements GridObserver {
     
     private final JLabel generationLabel;
     private final JLabel cellCountLabel;
-    private final JLabel helpLabel;
-    
+
     public InfoPanel(GridStateManager gridStateManager) {
         setLayout(new FlowLayout(FlowLayout.CENTER));
         setBackground(new Color(240, 240, 240));
@@ -25,7 +24,7 @@ public class InfoPanel extends JPanel implements GridObserver {
         
         this.generationLabel = new JLabel("Génération: 0");
         this.cellCountLabel = new JLabel("Cellules: 0");
-        this.helpLabel = new JLabel("[ESC] Aide");
+        JLabel helpLabel = new JLabel("[ESC] Aide");
         
         Font font = new Font("Arial", Font.PLAIN, 12);
         generationLabel.setFont(font);
@@ -38,7 +37,6 @@ public class InfoPanel extends JPanel implements GridObserver {
         add(new JLabel(" | "));
         add(helpLabel);
         
-        // S'enregistrer comme observer
         gridStateManager.addObserver(this);
     }
     

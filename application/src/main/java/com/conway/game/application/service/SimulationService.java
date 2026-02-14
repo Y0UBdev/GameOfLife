@@ -81,20 +81,7 @@ public class SimulationService {
             setSpeed(delayMillis + 100);
         }
     }
-    
-    public boolean isRunning() {
-        return running;
-    }
-    
-    public int getDelayMillis() {
-        return delayMillis;
-    }
-    
-    public void shutdown() {
-        stop();
-        executor.shutdown();
-    }
-    
+
     private void computeGeneration() {
         try {
             computeNextGenerationUseCase.execute();

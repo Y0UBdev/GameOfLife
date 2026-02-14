@@ -8,13 +8,6 @@ import javax.swing.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-/**
- * Contrôleur gérant les événements clavier.
- * 
- * Principe SOLID:
- * - Single Responsibility: gestion clavier uniquement
- * - Dependency Inversion: dépend des use cases
- */
 public class KeyboardController extends KeyAdapter {
     
     private final SimulationService simulationService;
@@ -46,22 +39,15 @@ public class KeyboardController extends KeyAdapter {
     
     private void showHelp() {
         String helpMessage = """
-            ╔══════════════════════════════════════════╗
-            ║   Jeu de la Vie de Conway - Aide        ║
-            ╠══════════════════════════════════════════╣
-            ║                                          ║
-            ║  ENTER      : Démarrer/Pause simulation  ║
-            ║  DELETE     : Effacer la grille          ║
-            ║  ←          : Accélérer                  ║
-            ║  →          : Ralentir                   ║
-            ║  ↑          : Zoomer                     ║
-            ║  ↓          : Dézoomer                   ║
-            ║  ESC        : Afficher cette aide        ║
-            ║                                          ║
-            ║  Clic souris : Activer/désactiver cellule║
-            ║                                          ║
-            ╚══════════════════════════════════════════╝
-            """;
+                - ENTER      : Démarrer/Pause simulation \s
+                - DELETE     : Effacer la grille         \s
+                - ←          : Accélérer                 \s
+                - →          : Ralentir                  \s
+                - ↑          : Zoomer                    \s
+                - ↓          : Dézoomer                  \s
+                - ESC        : Afficher cette aide       \s
+                - Clic souris : Activer/désactiver cellule
+           \s""";
         
         JOptionPane.showMessageDialog(
             null,
