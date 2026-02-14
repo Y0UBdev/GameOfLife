@@ -20,3 +20,23 @@ dependencies {
     implementation project(':application')
     implementation project(':infrastructure')
 }
+
+tasks.register('fatJar', Jar) {
+    archiveBaseName = 'ConwayGame'
+    archiveVersion = '1.0'
+    archiveClassifier = 'all'
+
+    manifest {
+        attributes 'Main-Class': 'com.conway.game.views.Main'
+    }
+
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    from {
+        configurations.runtimeClasspath.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+
+    with jar
+}
