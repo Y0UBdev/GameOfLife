@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.conway.game'
+version = '1.0.0'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+dependencies {
+    implementation project(':domain')
+    implementation project(':application')
+    
+    implementation 'com.google.code.gson:gson:2.10.1'
+    
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.3'
+    testImplementation 'org.assertj:assertj-core:3.24.2'
+}
+
+test {
+    useJUnitPlatform()
+}

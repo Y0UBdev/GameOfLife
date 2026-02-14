@@ -1,0 +1,6 @@
+rootProject.name = 'conway-game-of-life'
+
+include 'domain'
+include 'application'
+include 'infrastructure'
+include 'views'

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="17">
+      <module name="game-of-life.application" target="21" />
+      <module name="game-of-life.domains" target="21" />
+      <module name="game-of-life.infrastructures" target="21" />
+      <module name="game-of-life.views" target="21" />
+      <module name="GameOfLifeRefactor" target="21" />
+      <module name="GameOfLifeRefactor.infrastructures" target="21" />
+      <module name="GameOfLifeRefactor.infrastructures.main" target="21" />
+      <module name="GameOfLifeRefactor.infrastructures.test" target="21" />
+      <module name="GameOfLifeRefactor.main" target="21" />
+      <module name="GameOfLifeRefactor.test" target="21" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
