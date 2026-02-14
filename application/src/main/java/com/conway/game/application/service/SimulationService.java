@@ -43,43 +43,30 @@ public class SimulationService {
     }
     
     public void toggle() {
-        if (running) {
-            stop();
-        } else {
-            start();
-        }
+        if (running) stop();
+            else start();
     }
     
     public void setSpeed(int delayMillis) {
         boolean wasRunning = running;
         
-        if (wasRunning) {
-            stop();
-        }
+        if (wasRunning) stop();
         
         this.delayMillis = delayMillis;
         
-        if (wasRunning) {
-            start();
-        }
+        if (wasRunning) start();
     }
     
     public void increaseSpeed() {
         int newDelay;
-        if (delayMillis > 100) {
-            newDelay = delayMillis - 100;
-        } else if (delayMillis > 10) {
-            newDelay = Math.max(10, delayMillis - 10);
-        } else {
-            return;
-        }
+        if (delayMillis > 100) newDelay = delayMillis - 100;
+            else if (delayMillis > 10) newDelay = Math.max(10, delayMillis - 10);
+            else return;
         setSpeed(newDelay);
     }
     
     public void decreaseSpeed() {
-        if (delayMillis < 1000) {
-            setSpeed(delayMillis + 100);
-        }
+        if (delayMillis < 1000) setSpeed(delayMillis + 100);
     }
 
     private void computeGeneration() {
