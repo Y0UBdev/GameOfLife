@@ -2,6 +2,8 @@
 
 Application Java implémentant l'automate de John Conway avec une architecture Clean et modulaire.
 
+Télécharger le .jar : [ConwayGame-1.0-all](https://github.com/Y0UBdev/GameOfLife/releases/download/v1.0/ConwayGame-1.0-all.jar)
+
 ## Table des Matières
 
 - [Description](#description)
